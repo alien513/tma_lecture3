@@ -1,0 +1,130 @@
+body {
+  padding: 2vw;
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 2vw;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: darkmagenta;
+}
+
+.hidden {
+  padding: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+#dashboard {
+  min-height: 140px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border: 1px solid darkmagenta;
+}
+
+#dashboard div {
+  display: block;
+  border: 1px solid red;
+  margin: .1vw;
+  min-width: 9.5vw;
+  background-color: tomato;
+  padding: .5rem;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+#dashboard div p {
+  padding: 0;
+  margin: 0;
+}
+
+#dashboard div p:nth-child(1) {
+  font-weight: bold;
+}
+
+#dashboard div p:nth-child(2) {
+  text-align: center;
+  font-style: italic;
+}
+
+#dashboard div p:nth-child(3) {
+  text-align: right;
+}
+
+form {
+  display: grid;
+  grid-template-columns: [input] auto [add] auto [space] 1fr [remove] auto;
+  grid-gap: 1rem;
+  padding:0;
+  margin:0;
+  padding-top: 1vw;
+}
+
+input {
+  grid-column: input;
+  grid-row: auto;
+  color: darkmagenta;
+  font-size: 1rem;
+  height: 2rem;
+  letter-spacing: 2px;
+  border: 1px solid darkmagenta;
+  border-radius: 6px;
+  padding-left: 6px;
+}
+
+input::placeholder {
+  color: rgba(139, 0, 139, .33);
+}
+
+button {
+  color: white;
+  background-color: darkmagenta;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  border: 1px solid darkmagenta;
+  border-radius: 6px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all .5s ease-in-out;
+  transition-property: all;
+}
+
+button:disabled {
+  color: rgba(125, 125, 125, .33);
+  background-color: white;
+}
+
+button:hover {
+  text-shadow: #cccccc 0px 0px 2px;
+  transition: all .5s ease-in-out;
+  transition-property: all;
+}
+
+button[name="add"] {
+  grid-column: add;
+  grid-row: auto;
+}
+
+button[name="remove"] {
+  grid-column: remove;
+  grid-row: auto;
+}
