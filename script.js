@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     App.controls.input.addEventListener("keypress", event => {
-        console.log(event.charCode);
         if ( event.charCode === App.settings.buttonEnter ) {
             App.controls.add.dispatchEvent(new Event("click", { bubbles: true, cancelable: true }));
         }
